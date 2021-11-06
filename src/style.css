@@ -1,8 +1,75 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./style/color.css";
+@import "./style/typography.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--white);
+	color: var(--black);
+}
+
+body {
+	margin: 0;
+}
+
+.header-color {
+	background: var(--fire-red);
+	height: 4rem;
+}
+
+h2 {
+  color: var(--burnt-sienna);
+  margin: 0.6rem 0;
+}
+
+p {
+  color: var(--black);
+  margin: 0.5rem 0;
+}
+
+.profile {
+  max-width: calc(100% - (1.56rem * 2));
+  border-radius: 100%;
+  box-shadow: 0 3px 6px var(--black);
+}
+
+.l-contained {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.l-columns {
+  display: flex;
+}
+
+.l-columns > aside {
+  flex-basis: 33%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.l-columns > main {
+  flex-basis: 66%;
+}
+
+.decorative {
+  font-family: "Casey";
+  text-align: center;
+}
+
+h1.decorative {
+  line-height: 0.8;
+  margin: 1.5rem 0;
+  font-size: 4rem;
+}
+
+.rotate-offset {
+  margin-left: 1.8ch;
+  text-indent: -1.8ch;
+  transform: rotateZ(-6deg);
+}
+
+.l-columns > article {
+  margin: 2rem;
 }
