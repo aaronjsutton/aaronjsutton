@@ -73,3 +73,35 @@ h1.decorative {
 .l-columns > article {
   margin: 2rem;
 }
+
+ul.ww-badge-container {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 0;
+}
+
+li.ww-badge {
+	border-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+	color: var(--white);
+	cursor: default;
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.33rem 0.5rem;
+	margin: .25rem;
+	transform: translateY(0);
+	transition: 100ms transform ease-in-out;
+}
+
+li.ww-badge:hover {
+	transform: translateY(-3px);
+}
+
+ul.ww-badge-container > li.ww-badge:nth-child(odd):hover {
+	transform: rotateZ(3deg);
+}
+
+ul.ww-badge-container > li.ww-badge:nth-child(even):hover {
+	transform: rotateZ(-3deg);
+}

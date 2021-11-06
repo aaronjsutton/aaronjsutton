@@ -1,6 +1,7 @@
+/* Base color scheme */
 :root {
   --white: #faf5e8;
-  --bastard-amber: #ffac3e;
+  --rosco-amber: #ffac3e;
   --orange-peel: #ff925c;
   --black: #414141;
   --burnt-sienna: #5c3600;
@@ -9,4 +10,45 @@
   --green: #197d00;
   --true-blue: #007a85;
   --pale-indigo: #4d5da3;
+}
+
+/* Conveneince classes for named colors */
+.white {
+  background: var(--white);
+}
+
+.rosco-amber {
+  background: var(--rosco-amber);
+}
+
+.orange-peel {
+  background: var(--orange-peel);
+}
+
+.black {
+  background: var(--black);
+}
+
+.burnt-sienna {
+  background: var(--burnt-sienna);
+}
+
+.fire-red {
+  background: var(--fire-red);
+}
+
+.rose-pink {
+  background: var(--rose-pink);
+}
+
+.green {
+  background: var(--green);
+}
+
+.true-blue {
+  background: var(--true-blue);
+}
+
+.pale-indigo {
+  background: var(--pale-indigo);
 }
