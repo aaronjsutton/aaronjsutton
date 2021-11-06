@@ -94,14 +94,10 @@ li.ww-badge {
 	transition: 100ms transform ease-in-out;
 }
 
-li.ww-badge:hover {
-	transform: translateY(-3px);
-}
-
 ul.ww-badge-container > li.ww-badge:nth-child(odd):hover {
-	transform: rotateZ(3deg);
+	transform: rotateZ(3deg) translateY(-3px);
 }
 
 ul.ww-badge-container > li.ww-badge:nth-child(even):hover {
-	transform: rotateZ(-3deg);
+	transform: rotateZ(-3deg) translateY(-3px);
 }
