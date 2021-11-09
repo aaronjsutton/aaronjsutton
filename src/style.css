@@ -101,3 +101,31 @@ ul.ww-badge-container > li.ww-badge:nth-child(odd):hover {
 ul.ww-badge-container > li.ww-badge:nth-child(even):hover {
 	transform: rotateZ(-3deg) translateY(-3px);
 }
+
+nav.expand-resume {
+	margin: 0.5rem auto;
+}
+
+nav.expand-resume > ul {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+nav.expand-resume > ul > li {
+	font-weight: bold;
+	padding: 0.75rem 0;
+}
+
+nav.expand-resume > ul > li {
+	display: inline-block;
+	flex-basis: 100%;
+	height: 100%;
+	text-align: center;
+	border-right: 2px solid var(--black);
+}
+
+nav.expand-resume > ul > li:last-child {
+	border-right: none;
+}
