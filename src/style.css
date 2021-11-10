@@ -7,21 +7,29 @@
 
 html {
   background: var(--white);
-	color: var(--black);
+  color: var(--black);
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 .header-color {
-	background: var(--fire-red);
-	height: 4rem;
+  background: var(--fire-red);
+  height: 4rem;
 }
 
 h2 {
   color: var(--burnt-sienna);
   margin: 0.6rem 0;
+}
+
+h3 {
+  margin: 0.6rem 0;
+}
+
+h4 {
+  margin: 0.5rem 0;
 }
 
 p {
@@ -75,57 +83,69 @@ h1.decorative {
 }
 
 ul.ww-badge-container {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
 }
 
 li.ww-badge {
-	border-radius: 3px;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
-	color: var(--white);
-	cursor: default;
-	display: inline-block;
-	font-weight: bold;
-	padding: 0.33rem 0.5rem;
-	margin: .25rem;
-	transform: translateY(0);
-	transition: 100ms transform ease-in-out;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+  color: var(--white);
+  cursor: default;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.33rem 0.5rem;
+  margin: 0.25rem;
+  transform: translateY(0);
+  transition: 100ms transform ease-in-out;
 }
 
 ul.ww-badge-container > li.ww-badge:nth-child(odd):hover {
-	transform: rotateZ(3deg) translateY(-3px);
+  transform: rotateZ(3deg) translateY(-3px);
 }
 
 ul.ww-badge-container > li.ww-badge:nth-child(even):hover {
-	transform: rotateZ(-3deg) translateY(-3px);
+  transform: rotateZ(-3deg) translateY(-3px);
 }
 
 nav.expand-resume {
-	margin: 0.5rem auto;
+  margin: 0.5rem auto;
 }
 
 nav.expand-resume > ul {
-	display: flex;
-	list-style: none;
-	padding-left: 0;
-	margin: 0;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 nav.expand-resume > ul > li {
-	font-weight: bold;
-	padding: 0.75rem 0;
+  font-weight: bold;
+  padding: 0.75rem 0;
 }
 
 nav.expand-resume > ul > li {
-	display: inline-block;
-	flex-basis: 100%;
-	height: 100%;
-	text-align: center;
-	border-right: 2px solid var(--black);
+  display: inline-block;
+  flex-basis: 100%;
+  height: 100%;
+  text-align: center;
+  border-right: 2px solid var(--black);
 }
 
 nav.expand-resume > ul > li:last-child {
-	border-right: none;
+  border-right: none;
+}
+
+article.work-card {
+  background: white;
+	border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+  padding: 1.2rem;
+	margin: 1.2rem 0;
+}
+
+article.work-card * {
+	margin: 0.25rem 0;
 }

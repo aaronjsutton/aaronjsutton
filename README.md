@@ -1,3 +1,3 @@
 # Aaron Sutton
 
-> Just making my way through cybersapce
+> Just making my way through cyberspace.
