@@ -1,6 +1,7 @@
 /* Base color scheme */
 :root {
   --white: #faf5e8;
+	--gray: #999999;
   --rosco-amber: #ffac3e;
   --orange-peel: #ff925c;
   --black: #414141;
@@ -12,7 +13,7 @@
   --pale-indigo: #4d5da3;
 }
 
-/* Conveneince classes for named colors */
+/* Convenience classes for named colors */
 .white {
   background: var(--white);
 }
@@ -51,4 +52,10 @@
 
 .pale-indigo {
   background: var(--pale-indigo);
+}
+
+/* Text color convenience classes */
+
+.text-white {
+	color: var(--white);
 }
