@@ -1,0 +1,63 @@
+# Deploy static site using SSH.
+
+name: CD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.1
+
+      # Build the static site using Vite
+      - run: npm install
+      - run: npm run build
+      - run: tar -czf dist.tar.gz dist/
+      
+      - name: Upload the build artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: dist
+          path: dist.tar.gz
+          
+  deploy:
+    name: Deploy static site
+    runs-on: ubuntu-latest
+    needs: build
+    
+    env:
+      SSH_AGENT_SOCK: /tmp/ssh_agent.sock
+      DEPLOY_HOST: aaron.as
+    
+    steps:
+      - name: Download the build artifact
+        uses: actions/download-artifact@v2.0.10
+        with:
+          name: dist
+        
+      - run: tar -xzf dist.tar.gz
+      
+      - name: Setup known_hosts
+        run: |
+          mkdir ~/.ssh
+          ssh-keyscan "${{ env.DEPLOY_HOST }}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+      
+      - name: Deploy build artifact
+        run: |
+          eval $(ssh-agent -a ${{ env.SSH_AGENT_SOCK }})
+          ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+          rsync -r dist/ deploy@${{ env.DEPLOY_HOST }}:/var/www/${{ env.DEPLOY_HOST}}
