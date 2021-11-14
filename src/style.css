@@ -202,8 +202,9 @@ ul.social-tabs > li:hover {
 }
 
 ul.social-tabs img {
-  height: 100%;
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 9%));
+  height: 40px;
+  width: 40px;
 }
 
 @media screen and (max-width: 720px) {
@@ -221,6 +222,10 @@ ul.social-tabs img {
     max-width: 45%;
     margin: 1rem auto;
   }
+
+  .l-columns > aside img {
+		max-width: 138px;
+	}
 
   ul.social-tabs > li {
 		height: 44px;
