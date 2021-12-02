@@ -124,6 +124,27 @@ ul.ww-badge-container > li.ww-badge:nth-child(even):hover {
   transform: rotateZ(-3deg) translateY(-3px);
 }
 
+.expand-skills {
+	cursor: pointer;
+}
+
+.expand-skills-arrow {
+	transition: opacity 150ms ease-in-out;
+	opacity: 0;
+}
+
+.expand-skills:hover + .expand-skills-arrow {
+	opacity: 1;
+}
+
+*[data-expandable] {
+	display: none;
+}
+
+*[data-expandable][data-open] {
+	display: block;
+}
+
 nav.expand-resume {
   margin: 0.5rem auto;
 }
