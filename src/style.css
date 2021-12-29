@@ -1,5 +1,6 @@
 @import "./style/color.css";
 @import "./style/typography.css";
+@import "./style/print.css";
 
 * {
   box-sizing: border-box;
@@ -136,6 +137,7 @@ ul.ww-badge-container > li.ww-badge:nth-child(even):hover {
 .expand-skills:hover + .expand-skills-arrow {
 	opacity: 1;
 }
+
 
 *[data-expandable] {
 	display: none;

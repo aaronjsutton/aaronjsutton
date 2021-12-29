@@ -1,0 +1,52 @@
+@media print {
+	:root {
+		--white: white;
+	}
+
+	h2 {
+		color: var(--black) !important;
+	}
+
+	.l-columns {
+		display: block !important;
+	}
+
+	*[data-expandable] {
+		display: block !important;
+	}
+
+	header {
+		background: var(--black);
+		-webkit-print-color-adjust: exact !important;
+	}
+
+	h1.decorative.rotate-offset {
+		color: var(--white);
+		font: 1.802rem dico-sans;
+		font-weight: bold;
+		transform: none;
+		padding: 1rem;
+		text-align: left;
+	}
+
+	h1.decorative.rotate-offset > br {
+		display: none;
+	}
+
+	h1, h2, h3, h4 {
+		page-break-before: avoid;
+	}
+
+	.l-columns > aside {
+		display: none;
+	}
+
+	.l-contained {
+		max-width: 8in;
+		padding: .25in .8in;
+	}
+
+	.ww-article {
+		display: none;
+	}
+}
