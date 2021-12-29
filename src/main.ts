@@ -1,7 +1,6 @@
 import "./style.css";
 
 // Assign event listeners to all expandable elements on the page.
-
 const sections = Array.from(
   document.querySelectorAll("[data-expandable]")
 ) as any;
