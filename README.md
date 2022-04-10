@@ -1,3 +1,3 @@
 # Aaron Sutton
 
-> Just making my way through cyberspace.
+> RISC architecture is going to change everything.
