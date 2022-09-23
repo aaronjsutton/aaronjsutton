@@ -1,3 +1,3 @@
 # Aaron Sutton
 
-> RISC architecture is going to change everything.
+> Mess with the best, die like the rest.
