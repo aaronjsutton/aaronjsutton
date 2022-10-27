@@ -59,16 +59,19 @@ li {
 
 .l-contained {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 660px;
 }
 
 .l-columns {
   display: flex;
+	
 }
 
 .l-columns > aside {
-  flex-basis: 33%;
   text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .l-columns > main {
@@ -226,18 +229,20 @@ ul.social-tabs > li:hover {
 
 ul.social-tabs img {
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 9%));
-  height: 40px;
-  width: 40px;
+	object-fit: contain;
 }
 
 @media screen and (max-width: 720px) {
+	.l-contained {
+    padding: 0 1.5rem;
+	}
+
   .l-columns {
     flex-direction: column;
   }
 
   .l-columns > main {
     flex-basis: 100%;
-    padding: 0 2.5rem;
     margin: 0 auto;
   }
 
